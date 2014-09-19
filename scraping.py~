@@ -1,0 +1,13 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+driver = webdriver.Firefox()
+#driver.get("https://www.google.com")
+print "got to website"
+driver.get("https://ww2.aauw.org/branch_locator/index.php")
+print "got state variable"
+elem = driver.find_element_by_id("submit_state")
+print "submitted"
+elem.submit()
+print "finished"
+driver.close()
